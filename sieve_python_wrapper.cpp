@@ -17,10 +17,11 @@ PyObject* SieveOfEratosthenesWrapper(PyObject* /*self*/, PyObject* args) {
         PyErr_SetString(PyExc_TypeError, "expected non-negative number");
         return nullptr;
     }
+
     std::vector<size_t> primes = abc::SieveOfEratosthenes(n);
-    PyObject* result = PyList_New(0);
-    for (size_t prime: primes) {
-        PyList_Append(result, PyLong_FromLong(prime));
+    PyObject* result = PyList_New(primes.size());
+    for(size_t i = 0; i < primes.size(); i++) {
+        PyList_SetItem(result, i, PyLong_FromLong(primes[i]));
     }
     return result;
 }
