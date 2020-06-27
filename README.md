@@ -15,6 +15,18 @@ To create a simple example how to extend Python with C++ extensions.
 
 `python3 setup.py install` will build and install it.
 
+## How to use
+
+First, install the extension. Then you can use it like this:
+
+```python
+import cpp_python_extension
+
+print(cpp_python_extension.sieve_of_eratosthenes(11))
+```
+
+This will print all the prime numbers from 1 to 11 (inclusive).
+
 ## Benchmarking
 
 `pytest test_benchmark.py --verbose`
