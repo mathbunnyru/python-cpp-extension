@@ -2,10 +2,11 @@ from setuptools import setup, Extension
 import sysconfig
 
 
-language = 'c++17'
+language = 'c++'
+std = 'c++17'
 
 default_compile_args = sysconfig.get_config_var('CFLAGS').split()
-extra_compile_args = [f"-std={language}", "-Wall", "-Wextra", "-Werror", "-DNDEBUG", "-O3"]
+extra_compile_args = [f"-std={std}", "-Wall", "-Wextra", "-Werror", "-DNDEBUG", "-O3"]
 
 print(f'Default compile arguments: {default_compile_args}')
 print(f'Extra compile arguments: {extra_compile_args}')
