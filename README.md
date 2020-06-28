@@ -29,7 +29,7 @@ This will print all the prime numbers from 1 to 11 (inclusive).
 
 ## Benchmarking
 
-`pytest test_benchmark.py --verbose`
+`python3 -m pytest test_benchmark.py --verbose`
 
 ## Files
 
