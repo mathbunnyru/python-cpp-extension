@@ -1,6 +1,8 @@
 from setuptools import setup, Extension
 import sysconfig
 
+from Cython.Build import cythonize
+
 
 language = 'c++'
 std = 'c++17'
@@ -18,9 +20,16 @@ extension = Extension(
     language=language
 )
 
+cython_extension = Extension(
+    'cython_sieve',
+    sources=['cython_sieve.pyx', 'sieve.cpp'],
+    extra_compile_args=extra_compile_args,
+    language='c++',
+)
+
 setup(
     name='cpp_python_extension',
     version='1.0',
     description='This is Example module written in C++',
-    ext_modules=[extension]
+    ext_modules=cythonize([extension, cython_extension]),
 )
