@@ -15,6 +15,8 @@ To create a simple example how to extend Python with C++ extensions.
 
 `python3 setup.py install` will build and install it.
 
+You can use `--user` flag to install to the Python user install directory.
+
 ## How to use
 
 First, install the extension. Then you can use it like this:
