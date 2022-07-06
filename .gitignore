@@ -1,5 +1,3 @@
-cython_sieve.cpp
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -132,3 +130,6 @@ dmypy.json
 
 # macOS files
 .DS_Store
+
+# Cython generated file
+cython_sieve.cpp
