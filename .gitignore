@@ -130,3 +130,6 @@ dmypy.json
 
 # macOS files
 .DS_Store
+
+# Cython generated file
+cython_sieve.cpp
