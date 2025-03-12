@@ -17,14 +17,14 @@ print(f"Extra compile arguments: {extra_compile_args}")
 
 extension = Extension(
     "cpp_python_extension",
-    sources=[THIS_DIR / "sieve_python_wrapper.cpp", THIS_DIR / "sieve.cpp"],
+    sources=[THIS_DIR / "cpython_wrapper.cpp", THIS_DIR / "cpp_impl/sieve.cpp"],
     extra_compile_args=extra_compile_args,
     language=language,
 )
 
 cython_extension = Extension(
     "cython_sieve",
-    sources=[THIS_DIR / "cython_sieve.pyx", THIS_DIR / "sieve.cpp"],
+    sources=[THIS_DIR / "cython_wrapper/wrapper.pyx", THIS_DIR / "cpp_impl/sieve.cpp"],
     extra_compile_args=extra_compile_args,
     language="c++",
 )

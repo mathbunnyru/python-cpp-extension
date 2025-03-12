@@ -1,6 +1,6 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
-#include "sieve.h"
+#include "cpp_impl/sieve.h"
 
 static_assert(PY_MAJOR_VERSION == 3, "Python 3 is expected");
 

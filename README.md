@@ -35,16 +35,12 @@ This will print all the prime numbers from 1 to 11 (inclusive).
 
 ## Files
 
-`src/`:
+- `src/cpp_impl/` - C++ implementation and header file with declaration of `SieveOfEratosthenes` function
+- `src/setup.py` - `setuptools` file to easily build and install the extension
+- `src/cython_wrapper/` - Cython wrapper
+- `src/cpython_wrapper.cpp` / CPython wrapper
 
-- `setup.py` - `setuptools` file to easily build and install the extension
-- `sieve.h` - header file with declaration of `SieveOfEratosthenes` function
-- `sieve.cpp` - implementation file
-- `sieve_python_wrapper.cpp` - wrapper around `SieveOfEratosthenes` function to create `cpp_python_extension` module
-
-`tests/`:
-
-- `test_benchmark.py` - simple file to benchmark the extension
+`tests/test_benchmark.py` - simple file to benchmark the extension
 
 ## Credits
 

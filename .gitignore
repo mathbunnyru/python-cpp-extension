@@ -183,4 +183,4 @@ cython_debug/
 .DS_Store
 
 # Cython generated file
-cython_sieve.cpp
+src/cython_wrapper/wrapper.cpp
