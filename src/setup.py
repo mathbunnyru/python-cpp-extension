@@ -26,7 +26,7 @@ cython_extension = Extension(
     "cython_sieve",
     sources=[THIS_DIR / "cython_wrapper/wrapper.pyx", THIS_DIR / "cpp_impl/sieve.cpp"],
     extra_compile_args=extra_compile_args,
-    language="c++",
+    language=language,
 )
 
 setup(
