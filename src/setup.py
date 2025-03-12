@@ -1,7 +1,10 @@
+import pathlib
 import sysconfig
 
 from Cython.Build import cythonize
 from setuptools import Extension, setup
+
+THIS_DIR = pathlib.Path(__file__).parent
 
 language = "c++"
 std = "c++17"
@@ -14,14 +17,14 @@ print(f"Extra compile arguments: {extra_compile_args}")
 
 extension = Extension(
     "cpp_python_extension",
-    sources=["sieve_python_wrapper.cpp", "sieve.cpp"],
+    sources=[THIS_DIR / "sieve_python_wrapper.cpp", THIS_DIR / "sieve.cpp"],
     extra_compile_args=extra_compile_args,
     language=language,
 )
 
 cython_extension = Extension(
     "cython_sieve",
-    sources=["cython_sieve.pyx", "sieve.cpp"],
+    sources=[THIS_DIR / "cython_sieve.pyx", THIS_DIR / "sieve.cpp"],
     extra_compile_args=extra_compile_args,
     language="c++",
 )
