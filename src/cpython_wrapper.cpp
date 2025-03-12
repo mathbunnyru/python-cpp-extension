@@ -20,7 +20,7 @@ PyObject* SieveOfEratosthenesWrapper(PyObject* /*self*/, PyObject* args) {
 
     std::vector<size_t> primes = abc::SieveOfEratosthenes(n);
     PyObject* result = PyList_New(primes.size());
-    for(size_t i = 0; i < primes.size(); i++) {
+    for (size_t i = 0; i < primes.size(); i++) {
         PyList_SetItem(result, i, PyLong_FromLong(primes[i]));
     }
     return result;
