@@ -1,3 +1,4 @@
+# type: ignore
 import cpp_python_extension
 import cython_sieve
 import pytest
