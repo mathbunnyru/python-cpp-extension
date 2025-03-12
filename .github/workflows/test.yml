@@ -29,10 +29,8 @@ jobs:
       - name: Install Dependencies 📦
         run: pip install -r requirements.txt
 
-      - name: Build Python Extension 🛠️
-        run: python3 src/setup.py build
-      - name: Install Python Extension 📦
-        run: python3 src/setup.py install
+      - name: Build and Install Python Extension 🛠️
+        run: pip3 install src/
 
       - name: Run Benchmarks 📊
-        run: python3 -m pytest tests/test_benchmark.py --verbose
+        run: pytest tests/test_benchmark.py --verbose

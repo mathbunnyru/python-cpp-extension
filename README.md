@@ -11,11 +11,7 @@ To create a simple example how to extend Python with C++ extensions.
 
 ## Build and install
 
-`python3 src/setup.py build` will build the `C++` extension.
-
-`python3 src/setup.py install` will build and install it.
-
-You can use `--user` flag to install to the Python user install directory.
+`pip3 install src/` will build and install `C++` extension.
 
 ## How to use
 
