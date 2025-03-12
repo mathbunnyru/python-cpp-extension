@@ -38,7 +38,7 @@ PyMethodDef Methods[] = {
 
 PyModuleDef kModuleDefinition{
     PyModuleDef_HEAD_INIT,
-    "cpp_python_extension",                /* name of module */
+    "cpython_sieve",                       /* name of module */
     "Python sieve module written in C++",  /* module documentation, may be NULL */
     -1,                                    /* size of per-interpreter state of the module,
                                            or -1 if the module keeps state in global variables. */
@@ -51,6 +51,6 @@ PyModuleDef kModuleDefinition{
 
 }  // namespace
 
-extern "C" PyObject* PyInit_cpp_python_extension() {
+extern "C" PyObject* PyInit_cpython_sieve() {
     return PyModule_Create(&kModuleDefinition);
 }

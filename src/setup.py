@@ -15,8 +15,8 @@ extra_compile_args = [f"-std={std}", "-Wall", "-Wextra", "-Werror", "-DNDEBUG", 
 print(f"Default compile arguments: {default_compile_args}")
 print(f"Extra compile arguments: {extra_compile_args}")
 
-extension = Extension(
-    "cpp_python_extension",
+cpython_extension = Extension(
+    "cpython_sieve",
     sources=[THIS_DIR / "cpython_wrapper.cpp", THIS_DIR / "cpp_impl/sieve.cpp"],
     extra_compile_args=extra_compile_args,
     language=language,
@@ -33,5 +33,5 @@ setup(
     name="cpp_python_extension",
     version="1.0",
     description="This is Example module written in C++",
-    ext_modules=cythonize([extension, cython_extension]),
+    ext_modules=cythonize([cython_extension]) + [cpython_extension],
 )
