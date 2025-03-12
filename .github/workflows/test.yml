@@ -1,0 +1,35 @@
+name: Test everything
+
+on:
+  schedule:
+    # Weekly, at 03:00 on Monday UTC
+    - cron: "0 3 * * 1"
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Repo ⚡️
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set Up Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Build Python Extension 🛠️
+        run: python3 src/setup.py build
+      - name: Install Python Extension 📦
+        run: python3 src/setup.py install
+
+      - name: Run Benchmarks 📊
+        run: python3 -m pytest tests/test_benchmark.py --verbose
