@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: 3.12
 
+      - name: Install Dependencies 📦
+        run: pip install -r requirements.txt
+
       - name: Build Python Extension 🛠️
         run: python3 src/setup.py build
       - name: Install Python Extension 📦
