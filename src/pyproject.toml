@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "Cython>=0.29"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cpp-python-extension"
+version = "1.0.0"
+description = "Example module written in C++ with Python bindings"
+requires-python = ">=3.8"
+dependencies = [
+    "Cython>=0.29",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-benchmark",
+]
+
+[tool.setuptools]
+packages = []
