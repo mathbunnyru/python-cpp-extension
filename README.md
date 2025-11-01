@@ -8,6 +8,7 @@ To create a simple example how to extend Python with C++ extensions.
 
 - `python3-dev` or `python3-devel` python development package
 - `C++` compiler
+- `Cython` development headers
 
 ## Build and install
 
