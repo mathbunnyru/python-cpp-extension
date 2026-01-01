@@ -14,28 +14,28 @@
 repos:
   # Autoupdate: Python code
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.21.2
+    rev: 75992aaa40730136014f34227e0135f63fc951b4 # frozen: v3.21.2
     hooks:
       - id: pyupgrade
         args: [--py39-plus]
 
   # Automatically sort python imports
   - repo: https://github.com/pycqa/isort
-    rev: 7.0.0
+    rev: 0a09c783808cfe77bb3269250f663ff733d23302 # frozen: 7.0.0
     hooks:
       - id: isort
         args: [--profile, black]
 
   # Autoformat: Python code
   - repo: https://github.com/psf/black
-    rev: 25.12.0
+    rev: 782e5605c86aab56be6f905da10dcd3e463fd9c2 # frozen: 25.12.0
     hooks:
       - id: black
         args: [--target-version=py39]
 
   # Check python code static typing
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.19.1
+    rev: a66e98df7b4aeeb3724184b332785976d062b92e # frozen: v1.19.1
     hooks:
       - id: mypy
         args: [--config, ./mypy.ini]
@@ -51,13 +51,13 @@ repos:
 
   # Autoformat: YAML, JSON, Markdown, etc.
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.7.4
+    rev: 14abee445aea04b39069c19b4bd54efff6775819 # frozen: v3.7.4
     hooks:
       - id: prettier
 
   # `pre-commit sample-config` default hooks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # frozen: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: end-of-file-fixer
@@ -65,13 +65,13 @@ repos:
 
   # Lint: Python
   - repo: https://github.com/PyCQA/flake8
-    rev: 7.3.0
+    rev: d93590f5be797aabb60e3b09f2f52dddb02f349f # frozen: 7.3.0
     hooks:
       - id: flake8
 
   # Lint: Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.47.0
+    rev: 76b3d32d3f4b965e1d6425253c59407420ae2c43 # frozen: v0.47.0
     hooks:
       - id: markdownlint
         args: ["--fix"]
