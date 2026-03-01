@@ -21,7 +21,7 @@ repos:
 
   # Automatically sort python imports
   - repo: https://github.com/pycqa/isort
-    rev: 0a09c783808cfe77bb3269250f663ff733d23302 # frozen: 7.0.0
+    rev: a333737ed43df02b18e6c95477ea1b285b3de15a # frozen: 8.0.1
     hooks:
       - id: isort
         args: [--profile, black]
