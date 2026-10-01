@@ -21,7 +21,7 @@ repos:
 
   # Automatically sort python imports
   - repo: https://github.com/pycqa/isort
-    rev: 131f4adcd5582bfc53928ab0d740eceb8b506b6c # frozen: 9.0.1
+    rev: 9f905615631c545f5aea2516508109350d1d2f7d # frozen: 9.0.2
     hooks:
       - id: isort
         args: [--profile, black]
@@ -51,7 +51,7 @@ repos:
 
   # Autoformat: YAML, JSON, Markdown, etc.
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: 0ee178619d696787ca73d210cc191d720868c631 # frozen: v3.9.6
+    rev: ef4a397f916211b4a39ccf9d3d9cbb6562157251 # frozen: v3.9.9
     hooks:
       - id: prettier
 
@@ -65,7 +65,7 @@ repos:
 
   # Lint: Python
   - repo: https://github.com/PyCQA/flake8
-    rev: d93590f5be797aabb60e3b09f2f52dddb02f349f # frozen: 7.3.0
+    rev: cfbbfdeb2391c14a37e101e92a77f54f329e1726 # frozen: 7.4.1
     hooks:
       - id: flake8
 
