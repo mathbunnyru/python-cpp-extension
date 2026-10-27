@@ -75,7 +75,3 @@ repos:
     hooks:
       - id: markdownlint
         args: ["--fix"]
-
-# pre-commit.ci config reference: https://pre-commit.ci/#configuration
-ci:
-  autoupdate_schedule: monthly
