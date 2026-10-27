@@ -1,5 +1,7 @@
 Cython
-pytest
+# pytest 9.2.0 removed Node._nodeid, which pytest-benchmark 5.3.0 uses
+# https://github.com/ionelmc/pytest-benchmark/issues/321
+pytest<9.2
 pytest-benchmark
 setuptools
 wheel
